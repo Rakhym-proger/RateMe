@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Ask Me";
+}
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Login</th>
+                <th scope="col">Name</th>
+                <th scope="col">Birth day</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var us in ViewBag.Users)
+            { 
+                <tr>
+                    <th scope="row">@us.Id</th>
+                    <td>@us.Login</td>
+                    <td>@us.Name @us.Surname</td>
+                    <td>@us.BirthDate.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
